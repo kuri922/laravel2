@@ -15,15 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('hello','HelloController@index');
- Route::get('index', function () {
-     return view('index');
-   });
-
-  Route::resource('posts', 'postController');
-//   Route::get('send', function () {
-//     return view('send');
-//   });
+Route::get('/hello','HelloController@index');
+Route::post('/hello/result','HelloController@result');
+Route::post('/hello/sum','sumController@sum');
 
   
 
